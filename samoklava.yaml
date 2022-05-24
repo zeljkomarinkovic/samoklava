@@ -1,4 +1,4 @@
-units:
+units: 
   kx: cx
   ky: cy
   px: 2
@@ -28,8 +28,6 @@ points:
           shift: [0, -5]
   zones:
     matrix:
-      # anchor:
-      #   rotate: 5
       key.padding: ky
       columns:
         pinky:
@@ -38,52 +36,52 @@ points:
           key:
             column_net: P20
         ring:
-          stagger: 0.7 ky
+          stagger: 1.25 ky
           spread: kx
-          key:
+          key: 
             column_net: P19
         middle:
-          stagger: 0.2 ky
+          stagger: 0.7 ky
           spread: kx
-          key:
+          key: 
             column_net: P18
         index:
-          stagger: -0.2 ky
+          stagger: -0.7 ky
           spread: kx
-          key:
+          key: 
             column_net: P15
         inner:
-          stagger: -0.1 ky
+          stagger: -0.4 ky
           spread: kx
           key:
             column_net: P14
       rows:
         bottom:
-          row_net: P6
+          column_net: P6
         home:
-          row_net: P5
+          column_net: P5
         top:
-          row_net: P4
+          column_net: P4
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.5 kx, -1 ky]
+        shift: [-1.3 kx , -2.4 ky]
       columns:
         near:
           spread: kx
-          rotate: -15
+          rotate:
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P18
         home:
           spread: kx
-          rotate: -15
+          rotate: -25
           origin: [-0.5 kx, -0.5 ky]
-          key:
+          key: 
             column_net: P15
         far:
           spread: kx
-          rotate: -15
+          rotate: -25
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P14
@@ -91,13 +89,12 @@ points:
         thumb:
           row_net: P7
 outlines:
-  # board dimensions according to JLCPCB: 122.28 mm x 101.05 mm
   exports:
     raw:
-      - type: keys
-        side: left
-        size: [kx + px, ky + py]
-        corner: px
+    - type: keys
+      side: left
+      size: [kx + px, ky + py]
+      corner: px
     thumbfan_glue:
       - type: polygon
         points:
@@ -157,6 +154,7 @@ outlines:
       main:
         type: outline
         name: raw
+        fillet: 
       patch_inner:
         type: outline
         name: patch_inner
@@ -443,4 +441,3 @@ pcbs:
           layer: B.SilkS
           text: "samoklava v0.1\\nby soundmonster"
           justify: right mirror
-
