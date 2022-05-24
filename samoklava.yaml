@@ -38,22 +38,22 @@ points:
           key:
             column_net: P20
         ring:
-          stagger: 0.7 ky
+          stagger: 1.25 ky
           spread: kx
           key:
             column_net: P19
         middle:
-          stagger: 0.2 ky
+          stagger: 0.7 ky
           spread: kx
           key:
             column_net: P18
         index:
-          stagger: -0.2 ky
+          stagger: -0.7 ky
           spread: kx
           key:
             column_net: P15
         inner:
-          stagger: -0.1 ky
+          stagger: -0.4 ky
           spread: kx
           key:
             column_net: P14
@@ -67,23 +67,23 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.5 kx, -1 ky]
+        shift: [-1.3 kx , -2.4 ky]
       columns:
         near:
           spread: kx
-          rotate: -15
+          rotate:
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P18
         home:
           spread: kx
-          rotate: -15
+          rotate: -25
           origin: [-0.5 kx, -0.5 ky]
-          key:
+          key: 
             column_net: P15
         far:
           spread: kx
-          rotate: -15
+          rotate: -25
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P14
