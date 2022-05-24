@@ -1,4 +1,4 @@
-units: 
+units:
   kx: cx
   ky: cy
   px: 2
@@ -28,6 +28,8 @@ points:
           shift: [0, -5]
   zones:
     matrix:
+      # anchor:
+      #   rotate: 5
       key.padding: ky
       columns:
         pinky:
@@ -36,52 +38,52 @@ points:
           key:
             column_net: P20
         ring:
-          stagger: 1.25 ky
-          spread: kx
-          key: 
-            column_net: P19
-        middle:
           stagger: 0.7 ky
           spread: kx
-          key: 
+          key:
+            column_net: P19
+        middle:
+          stagger: 0.2 ky
+          spread: kx
+          key:
             column_net: P18
         index:
-          stagger: -0.7 ky
+          stagger: -0.2 ky
           spread: kx
-          key: 
+          key:
             column_net: P15
         inner:
-          stagger: -0.4 ky
+          stagger: -0.1 ky
           spread: kx
           key:
             column_net: P14
       rows:
         bottom:
-          column_net: P6
+          row_net: P6
         home:
-          column_net: P5
+          row_net: P5
         top:
-          column_net: P4
+          row_net: P4
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.3 kx , -2.4 ky]
+        shift: [-1.5 kx, -1 ky]
       columns:
         near:
           spread: kx
-          rotate:
+          rotate: -15
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P18
         home:
           spread: kx
-          rotate: -25
+          rotate: -15
           origin: [-0.5 kx, -0.5 ky]
-          key: 
+          key:
             column_net: P15
         far:
           spread: kx
-          rotate: -25
+          rotate: -15
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P14
@@ -89,12 +91,13 @@ points:
         thumb:
           row_net: P7
 outlines:
+  # board dimensions according to JLCPCB: 122.28 mm x 101.05 mm
   exports:
     raw:
-    - type: keys
-      side: left
-      size: [kx + px, ky + py]
-      corner: px
+      - type: keys
+        side: left
+        size: [kx + px, ky + py]
+        corner: px
     thumbfan_glue:
       - type: polygon
         points:
@@ -154,7 +157,6 @@ outlines:
       main:
         type: outline
         name: raw
-        fillet: 
       patch_inner:
         type: outline
         name: patch_inner
