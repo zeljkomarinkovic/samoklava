@@ -102,26 +102,45 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_inner_bottom
-            shift: [0.5 kx + 0.5px, -0.5 ky + 0.5 py]
+            shift: [1 kx + 0.5px, -1.7 ky + 0.5 py]
           - ref: thumbfan_far_thumb
             shift: [0.5 kx - 0.5px, 0.5 ky + 0.5 py]
           - ref: thumbfan_far_thumb
             shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
+          # angle for far thumb
+          - ref: matrix_inner_top
+            shift: [1 kx + 0.5px, -4.79 ky - 5 py]
+          # angle on middle thumb
+          - ref: matrix_inner_home
+            shift: [0.1 kx + 0.5px, -3.9 ky - 0.5 py]
+          # angle on near thumb
           - ref: thumbfan_near_thumb
-            shift: [-0.5 kx + 0.5 px, -0.5 ky - 0.5 py]
+            shift: [-0.5 kx + 0.5px, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_bottom
-            shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
+            shift: [0.5 kx - 0.5py, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_home
           - ref: matrix_inner_home
+            shift: [ 0 kx - 0py, 0.5 ky - 0.5 py]
     patch_outer:
       - type: polygon
         points:
           - ref: matrix_ring_top
+            shift: [0 (kx + px), -0.7 ky]
           - ref: matrix_ring_bottom
           - ref: matrix_pinky_bottom
             shift: [-0.5 (kx + px), 0]
           - ref: matrix_pinky_top
-            shift: [-0.5 (kx + px), 0]
+            shift: [-0.5 (kx + px), 3]
+    patch_outer_2:
+      - type: polygon
+        points:
+          - ref: matrix_ring_top
+          - ref: matrix_ring_bottom
+            shift: [0, 1.5 ky]
+          - ref: matrix_pinky_bottom
+            shift: [0.445 kx, 2.5 ky]
+          - ref: matrix_pinky_top
+            shift: [0.445 kx, 1 ky]
     patch_inner:
       - type: polygon
         points:
@@ -137,8 +156,8 @@ outlines:
         anchor:
           ref:
             - matrix_inner_top
-          shift: [0 kx, -4.05 ky]
-        size: [32, 76.5]
+          shift: [0 kx, -4.74 ky]
+        size: [32, 90]
         corner: px
     switches:
       main:
@@ -164,6 +183,10 @@ outlines:
       patch_outer:
         type: outline
         name: patch_outer
+        operation: add
+      patch_outer_2:
+        type: outline
+        name: patch_outer_2
         operation: add
       thumbfan_glue:
         type: outline
